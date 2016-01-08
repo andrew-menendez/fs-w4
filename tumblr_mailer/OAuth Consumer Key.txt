@@ -1,0 +1,29 @@
+OAuth Consumer Key:
+zoUpQUpd7rngipo6YLAwLYtKNLIGow1T3kNU4LgZ2skRImPbSs
+
+
+Secret Key:  a2xJA9VKDpvQno3ile9avJvg00ReMi0zkVTukWZXV2pyYe1OJq 
+
+Request-token URL:
+POST https://www.tumblr.com/oauth/request_token
+Authorize URL:
+https://www.tumblr.com/oauth/authorize
+Access-token URL:
+POST https://www.tumblr.com/oauth/access_token
+
+
+
+
+// Authenticate via OAuth
+var tumblr = require('tumblr.js');
+var client = tumblr.createClient({
+  consumer_key: 'zoUpQUpd7rngipo6YLAwLYtKNLIGow1T3kNU4LgZ2skRImPbSs',
+  consumer_secret: 'a2xJA9VKDpvQno3ile9avJvg00ReMi0zkVTukWZXV2pyYe1OJq',
+  token: 'UZsl3Bwbh8ULq7SK5JaOsmhhsl3SNNjoCcKVl5daDo2VsJGGdw',
+  token_secret: 'bB1QSJV4Vlx1R3GaRDDj1xiwiIc2QjYmeMnSOPEYmBhZxxlUAq'
+});
+
+// Make the request
+client.userInfo(function (err, data) {
+    // ...
+});

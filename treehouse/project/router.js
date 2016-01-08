@@ -49,7 +49,7 @@ function home(request,response){
 		response.writeHead(200, commonHeaders);
 	  	Renderer.view("header",{},response);
 	  
-	  	//get json from treehouse
+	  	//get json from treehouse using profile.js
 	  	var studentProfile = new Profile(username);
 	  	//on end
 	  	studentProfile.on("end", function(profileJSON){
